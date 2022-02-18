@@ -7,10 +7,6 @@
 #include <string.h>
 #include <sys/stat.h>
 
-#ifndef BUF_SIZE
-#define BUF_SIZE 4096
-#endif
-
 static int filewrite (const char *fname, const char *data) {
 	int fw;
 
@@ -214,8 +210,45 @@ int main () {
 					dest = set;
 				}
 			}
+		else if(strstr(line, "cp_recursive"))
+			while((set = strsep(&line, "=")) != NULL) {
+				if (strcmp(set, "cp_recursive")){
+					int len = strlen(set);
+					set[len-1] = '\0';
+					cp_recursive = set;
+				}
+			}
+		else if(strstr(line, "gpio_in_flip"))
+			while((set = strsep(&line, "=")) != NULL) {
+				if (strcmp(set, "gpio_in_flip")){
+					int len = strlen(set);
+					set[len-1] = '\0';
+					gpio_in_flip = set;
+				}
+			}
+		else if(strstr(line, "buff_size"))
+			while((set = strsep(&line, "=")) != NULL) {
+				if (strcmp(set, "buff_size")){
+					int len = strlen(set);
+					set[len-1] = '\0';
+					buff_size = set;
+				}
+			}
+		else if(strstr(line, "restore_perms"))
+			while((set = strsep(&line, "=")) != NULL) {
+				if (strcmp(set, "restore_perms")){
+					int len = strlen(set);
+					set[len-1] = '\0';
+					restore_perms = set;
+				}
+			}
 	}
 	fclose(conf);
+
+	
+	#ifndef BUF_SIZE
+	#define BUF_SIZE buff_size;
+	#endif
 
 	while(1 == 1){
 		/*** READ GPIO ***/
