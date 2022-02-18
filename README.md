@@ -14,7 +14,7 @@ All options can be configured in the /etc/gpsave/gpsave.config file which is par
 ## Install
 
 Designed for and tested on a raspberry with Sysfs installed, it should work on any Linux machine which has the Sysfs C library installed and available GPIO's.
-Installing is easy simply clone the repo
+Installing is easy simply follow the steps bellow
 
 ```
 git clone https://github.com/TheJostler/gpsave4rpi.git
