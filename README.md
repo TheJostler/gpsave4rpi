@@ -9,7 +9,7 @@ I hope to add a GPIO indicator LED sson, to indicate when copying starts and fin
 
 All options can be configured in the /etc/gpsave/gpsave.config file which is parsed when the program begins.
 
-##Install
+## Install
 
 Currently this utility only runs on Raspberry pi with Sysfs installed
 Installing is easy simply clone the repo
@@ -19,7 +19,7 @@ Installing is easy simply clone the repo
 
 ```sudo make install```
 
-##Configuration
+## Configuration
 
 Edit the config file in the 'gpsave4rpi' directory and run:
 
@@ -27,13 +27,13 @@ Edit the config file in the 'gpsave4rpi' directory and run:
 
 This will automatically update your copy in the etc folder
 
-##Update
+## Update
 
 To update the binary in $PATH run
 
 ```sudo make update```
 
-##Remove
+## Remove
 
 To uninstall gpsave4rpi and remove all files relating to it run:
 
