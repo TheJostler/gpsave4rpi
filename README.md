@@ -14,11 +14,13 @@ All options can be configured in the /etc/gpsave/gpsave.config file which is par
 Currently this utility only runs on Raspberry pi with Sysfs installed
 Installing is easy simply clone the repo
 
-```git clone https://github.com/TheJostler/gpsave4rpi.git
+```
+git clone https://github.com/TheJostler/gpsave4rpi.git
 
 cd gpsave4rpi
 
-sudo make install```
+sudo make install
+```
 
 ## Configuration
 
