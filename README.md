@@ -1,6 +1,8 @@
 # gpsave4rpi
 My custom Auto Backup Binary activated by gpio input.
 
+I made it as part of a gift for my fiance, a Custom Utility that will be used on a bespoke portable media server powered by raspberry pi.
+
 This script starts listening for GPIO input using SYSFS library.
 When it is triggered the program will start to recursively copy all files found in the "src" directory into the "dest"
 directory, 
