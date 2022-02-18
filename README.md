@@ -13,7 +13,7 @@ All options can be configured in the /etc/gpsave/gpsave.config file which is par
 
 ## Install
 
-Currently this utility only runs on Raspberry pi with Sysfs installed
+Designed for and tested on a raspberry with Sysfs installed, it should work on any Linux machine which has the Sysfs C library installed and available GPIO I/O.
 Installing is easy simply clone the repo
 
 ```
