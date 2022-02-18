@@ -1,5 +1,5 @@
 # gpsave4rpi
-My custom Auto Backup Binary activated by gpio input.
+A bespoke auto backup utility activated by gpio input.
 
 I made it as part of a gift for my fiance, a Custom Utility that will be used on a bespoke portable media server powered by raspberry pi.
 
