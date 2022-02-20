@@ -198,7 +198,7 @@ int main () {
 					gpio_out = set;
 				}
 			}
-		else if(strstr(line, "src"))
+		else if(strstr(line, "src") && ! strstr(line, "#"))
 			while((set = strsep(&line, "=")) != NULL) {
 				if (strcmp(set, "src")){
 					int len = strlen(set);
