@@ -8,7 +8,7 @@
 #include <sys/stat.h>
 
 #ifndef BUF_SIZE
-#define BUF_SIZE 4096;
+#define BUF_SIZE 4096
 #endif
 
 static int filewrite (const char *fname, const char *data) {
