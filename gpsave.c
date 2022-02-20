@@ -163,7 +163,7 @@ int main () {
 
 /***/// GET CONFIG ///***/
 
-	char *gpio_in, *gpio_out, *src, *dest;	
+	char *gpio_in, *gpio_out, *src, *dest, *cp_recursive, *gpio_in_flip, *buff_size, *restore_perms;
 
 	//temps
 	char *set, *line = NULL;
