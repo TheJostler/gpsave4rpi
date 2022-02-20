@@ -167,7 +167,7 @@ int main () {
 
 /***/// GET CONFIG ///***/
 
-	char *gpio_in, *gpio_out, *src, *dest, *cp_recursive, *gpio_input_flip, *buff_size, *restore_perms;
+	char *gpio_in, *gpio_out, *src, *dest, *cp_recursive, *input_flip, *buff_size, *restore_perms;
 
 	//temps
 	char *set, *line = NULL;
@@ -222,12 +222,12 @@ int main () {
 					cp_recursive = set;
 				}
 			}
-		else if(strstr(line, "gpio_input_flip") && ! strstr(line, "#"))
+		else if(strstr(line, "input_flip") && ! strstr(line, "#"))
 			while((set = strsep(&line, "=")) != NULL) {
 				if (strcmp(set, "gpio_in_flip")){
 					int len = strlen(set);
 					set[len-1] = '\0';
-					gpio_input_flip = set;
+					input_flip = set;
 				}
 			}
 		else if(strstr(line, "buff_size") && ! strstr(line, "#"))
@@ -251,7 +251,7 @@ int main () {
 
 	/*** DEBUG ***/
 
-	printf("\n\ngpio_in: %s\n gpio_out: %s\n src: %s\n dest: %s\n cp_recursive: %s\n gpio_in_flip: %s\n buff_size: %s\n restore_perms: %s\n",gpio_in, gpio_out, src, dest, cp_recursive, gpio_input_flip, buff_size, restore_perms);
+	printf("\n\ngpio_in: %s\n gpio_out: %s\n src: %s\n dest: %s\n cp_recursive: %s\n gpio_in_flip: %s\n buff_size: %s\n restore_perms: %s\n",gpio_in, gpio_out, src, dest, cp_recursive, input_flip, buff_size, restore_perms);
 
 
 	while(1 == 1){
