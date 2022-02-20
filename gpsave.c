@@ -182,7 +182,7 @@ int main () {
 	}
 
 	while ((read = getline(&line, &len, conf)) != -1) {
-		if(strstr(line, "gpio_in"))
+		if(strstr(line, "gpio_in") && ! strstr(line, "#"))
 			while((set = strsep(&line, "=")) != NULL) {
 				if (strcmp(set, "gpio_in")){
 					int len = strlen(set);
@@ -190,7 +190,7 @@ int main () {
 					gpio_in = set;
 				}
 			}
-		else if(strstr(line, "gpio_out"))
+		else if(strstr(line, "gpio_out") && ! strstr(line, "#"))
 			while((set = strsep(&line, "=")) != NULL) {
 				if (strcmp(set, "gpio_out")){
 					int len = strlen(set);
@@ -206,7 +206,7 @@ int main () {
 					src = set;
 				}
 			}
-		else if(strstr(line, "dest"))
+		else if(strstr(line, "dest") && ! strstr(line, "#"))
 			while((set = strsep(&line, "=")) != NULL) {
 				if (strcmp(set, "dest")){
 					int len = strlen(set);
@@ -214,7 +214,7 @@ int main () {
 					dest = set;
 				}
 			}
-		else if(strstr(line, "cp_recursive"))
+		else if(strstr(line, "cp_recursive") && ! strstr(line, "#"))
 			while((set = strsep(&line, "=")) != NULL) {
 				if (strcmp(set, "cp_recursive")){
 					int len = strlen(set);
@@ -222,7 +222,7 @@ int main () {
 					cp_recursive = set;
 				}
 			}
-		else if(strstr(line, "gpio_in_flip"))
+		else if(strstr(line, "gpio_in_flip") && ! strstr(line, "#"))
 			while((set = strsep(&line, "=")) != NULL) {
 				if (strcmp(set, "gpio_in_flip")){
 					int len = strlen(set);
@@ -230,7 +230,7 @@ int main () {
 					gpio_in_flip = set;
 				}
 			}
-		else if(strstr(line, "buff_size"))
+		else if(strstr(line, "buff_size") && ! strstr(line, "#"))
 			while((set = strsep(&line, "=")) != NULL) {
 				if (strcmp(set, "buff_size")){
 					int len = strlen(set);
@@ -238,7 +238,7 @@ int main () {
 					buff_size = set;
 				}
 			}
-		else if(strstr(line, "restore_perms"))
+		else if(strstr(line, "restore_perms") && ! strstr(line, "#"))
 			while((set = strsep(&line, "=")) != NULL) {
 				if (strcmp(set, "restore_perms")){
 					int len = strlen(set);
