@@ -227,7 +227,7 @@ int main () {
 				if (strcmp(set, "gpio_in_flip")){
 					int len = strlen(set);
 					set[len-1] = '\0';
-					gpio_in_flip = set;
+					gpio_input_flip = set;
 				}
 			}
 		else if(strstr(line, "buff_size") && ! strstr(line, "#"))
