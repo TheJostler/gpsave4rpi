@@ -263,7 +263,7 @@ int main () {
 
 	/*** WAIT FOR BUTTON PUSH ***/
 		while (1 == 1) {
-	        sleep(0.5);
+	        sleep(0.9);
 			fr = fopen(gpiovalue,"r");
 			if (fr == NULL) {
 				printf("ERROR could not open %s\n", gpiovalue);
@@ -285,7 +285,7 @@ int main () {
 
 	/*** WAIT FOR BUTTON RELEASE ***/
 		while (1 == 1) {
-	        sleep(0.5);
+	        sleep(0.9);
 			fr = fopen(gpiovalue,"r");
 			if (fr == NULL) {
 				printf("ERROR could not open %s\n", gpiovalue);
