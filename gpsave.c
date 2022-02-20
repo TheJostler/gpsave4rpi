@@ -6,7 +6,6 @@
 #include <unistd.h>
 #include <string.h>
 #include <sys/stat.h>
-#include <time.h>
 
 #ifndef BUF_SIZE
 #define BUF_SIZE 4096
@@ -264,7 +263,7 @@ int main () {
 
 	/*** WAIT FOR BUTTON PUSH ***/
 		while (1 == 1) {
-	        Sleep(500);
+	        usleep(500000);
 			fr = fopen(gpiovalue,"r");
 			if (fr == NULL) {
 				printf("ERROR could not open %s\n", gpiovalue);
@@ -286,7 +285,7 @@ int main () {
 
 	/*** WAIT FOR BUTTON RELEASE ***/
 		while (1 == 1) {
-	        Sleep(500);
+	        usleep(500000);
 			fr = fopen(gpiovalue,"r");
 			if (fr == NULL) {
 				printf("ERROR could not open %s\n", gpiovalue);
@@ -295,7 +294,7 @@ int main () {
 			fscanf(fr, "%d", &buff);
 			if (!buff) {
 				printf("\n");
-				Sleep(1500);
+				usleep(1500000);
 				break;
 			}
 			printf("\rfinished");
