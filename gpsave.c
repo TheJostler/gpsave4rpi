@@ -6,6 +6,7 @@
 #include <unistd.h>
 #include <string.h>
 #include <sys/stat.h>
+#include <time.h>
 
 #ifndef BUF_SIZE
 #define BUF_SIZE 4096
