@@ -249,6 +249,10 @@ int main () {
 	}
 	fclose(conf);
 
+	/*** DEBUG ***/
+
+	printf("\n\ngpio_in: %s\n gpio_out: %s\n src: %s\n dest: %s\n cp_recursive: %s\n gpio_in_flip: %s\n buff_size: %s\n restore_perms: %s\n",gpio_in, gpio_out, src, dest, cp_recursive, gpio_in_flip, buff_size, restore_perms);
+
 
 	while(1 == 1){
 		/*** READ GPIO ***/
