@@ -7,7 +7,9 @@
 #include <string.h>
 #include <sys/stat.h>
 
-#define BUF_SIZE
+#ifndef BUF_SIZE
+#define BUF_SIZE 4096;
+#endif
 
 static int filewrite (const char *fname, const char *data) {
 	int fw;
@@ -247,10 +249,6 @@ int main () {
 	}
 	fclose(conf);
 
-	
-	#ifndef BUF_SIZE
-	#define BUF_SIZE buff_size;
-	#endif
 
 	while(1 == 1){
 		/*** READ GPIO ***/
