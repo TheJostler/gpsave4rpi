@@ -181,6 +181,7 @@ int main () {
 		return 1;
 	}
 
+	//find configs, strip '\n' char from the ends and declare them as variables. Will ignore all lines with '#'
 	while ((read = getline(&line, &len, conf)) != -1) {
 		if(strstr(line, "gpio_in") && ! strstr(line, "#"))
 			while((set = strsep(&line, "=")) != NULL) {
@@ -305,7 +306,5 @@ int main () {
 			fflush(stdout);
 			fclose(fr);
 		}
-        if(GPIO(gpio_in, "unexport") > 0)
-			printf("ERROR GPIO%s could not be unexported\n", gpio_in);
 	}
 }

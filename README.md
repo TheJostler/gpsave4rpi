@@ -7,7 +7,7 @@ This script starts listening for GPIO input using SYSFS library.
 When it is triggered the program will start to recursively copy all files found in the "src" directory into the "dest"
 directory, 
 
-I hope to add a GPIO indicator LED sson, to indicate when copying starts and finishes
+I hope to add a GPIO indicator LED soon, to indicate when copying starts and finishes
 
 All options can be configured in the /etc/gpsave/gpsave.config file which is parsed when the program begins.
 
