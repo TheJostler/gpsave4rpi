@@ -7,6 +7,8 @@
 #include <string.h>
 #include <sys/stat.h>
 
+#define BUF_SIZE
+
 static int filewrite (const char *fname, const char *data) {
 	int fw;
 
