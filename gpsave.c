@@ -222,7 +222,7 @@ int main () {
 					cp_recursive = set;
 				}
 			}
-		else if(strstr(line, "gpio_in_flip") && ! strstr(line, "#"))
+		else if(strstr(line, "gpio_input_flip") && ! strstr(line, "#"))
 			while((set = strsep(&line, "=")) != NULL) {
 				if (strcmp(set, "gpio_in_flip")){
 					int len = strlen(set);
